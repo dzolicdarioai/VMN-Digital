@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const geist = Geist({ subsets: ["latin"] });
-const geistMono = Geist_Mono({ subsets: ["latin"] });
+const geist = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
   title: 'VMN Digital | Web Design & Performance Improvement',
@@ -29,15 +29,19 @@ export const metadata: Metadata = {
   },
 }
 
+import { LocaleProvider } from '@/components/locale-provider'
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geist.className} antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geist.variable} ${geistMono.variable} ${geist.className} font-sans antialiased`}
+      >
+        <LocaleProvider>{children}</LocaleProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
   --color-background: #0B0C10;
   --color-foreground: #C5C6C7;
   --color-card: #1F2833;
@@ -22,29 +24,110 @@
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
-  
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-screen;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 50% -20%, rgb(102 252 241 / 0.12), transparent 55%),
+      radial-gradient(ellipse 80% 50% at 100% 50%, rgb(69 162 158 / 0.08), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 0% 80%, rgb(102 252 241 / 0.06), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: '';
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
   h1 {
     @apply font-bold text-4xl md:text-5xl;
   }
-  
+
   h2 {
     @apply font-bold text-3xl md:text-4xl;
   }
-  
+
   h3 {
     @apply font-bold text-2xl md:text-3xl;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-secondary transition-colors duration-300;
+  .page-shell {
+    @apply relative z-[1];
   }
-  
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold text-primary-foreground;
+    @apply bg-primary shadow-[0_0_0_1px_rgb(102_252_241_/_0.35),0_4px_24px_-8px_rgb(102_252_241_/_0.55)];
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-primary/92 hover:shadow-[0_0_0_1px_rgb(102_252_241_/_0.5),0_8px_32px_-6px_rgb(102_252_241_/_0.45)];
+    @apply hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary {
+      @apply hover:translate-y-0 transition-colors;
+    }
+  }
+
   .section-padding {
-    @apply py-20 md:py-32 px-4 md:px-8;
+    @apply py-20 md:py-28 lg:py-32 px-4 md:px-8;
+  }
+
+  .section-padding-tight {
+    @apply py-16 md:py-24 lg:py-28 px-4 md:px-8;
+  }
+
+  .section-surface {
+    @apply relative overflow-hidden border-y border-border/40;
+    background:
+      linear-gradient(180deg, rgb(31 40 51 / 0.65) 0%, rgb(11 12 16 / 0.35) 100%);
+    backdrop-filter: blur(12px);
+  }
+
+  .section-surface-muted {
+    @apply relative overflow-hidden;
+    background:
+      radial-gradient(ellipse 100% 80% at 50% 0%, rgb(102 252 241 / 0.06), transparent 55%),
+      linear-gradient(180deg, rgb(11 12 16 / 0.9) 0%, rgb(31 40 51 / 0.45) 100%);
+  }
+
+  .glow-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl opacity-40;
+    background: radial-gradient(circle, rgb(102 252 241 / 0.35), transparent 70%);
+  }
+
+  .card-interactive {
+    @apply rounded-lg border border-border/80 bg-background/80 backdrop-blur-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_12px_40px_-16px_rgb(102_252_241_/_0.25)];
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-interactive {
+      @apply hover:translate-y-0;
+    }
+  }
+
+  .link-subtle {
+    @apply text-foreground/70 underline-offset-4 decoration-border/60 transition-colors duration-200;
+    @apply hover:text-primary hover:decoration-primary/80;
   }
 }
