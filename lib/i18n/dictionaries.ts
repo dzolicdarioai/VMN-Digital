@@ -13,6 +13,16 @@ const en = {
   },
   header: {
     brand: 'VMN Digital',
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    nav: {
+      services: 'Services',
+      about: 'About',
+      process: 'Process',
+      testimonials: 'Testimonials',
+      faq: 'FAQ',
+      contact: 'Contact',
+    },
   },
   hero: {
     titleBefore: 'Web design that ',
@@ -309,6 +319,16 @@ const hr = {
   },
   header: {
     brand: 'VMN Digital',
+    openMenu: 'Otvori izbornik',
+    closeMenu: 'Zatvori izbornik',
+    nav: {
+      services: 'Usluge',
+      about: 'O nama',
+      process: 'Proces',
+      testimonials: 'Preporuke',
+      faq: 'ČPP',
+      contact: 'Kontakt',
+    },
   },
   hero: {
     titleBefore: 'Web dizajn koji ',

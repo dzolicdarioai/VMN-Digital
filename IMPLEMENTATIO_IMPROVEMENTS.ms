@@ -21,23 +21,23 @@
 
 ## Phase A — Foundation & global UX
 
-- [ ] **A1** Keep **single page**, **dark theme**, **Geist** (and Geist Mono if used for labels/code snippets).
-- [ ] **A2** Global styles: **glow**, **blur**, **gradients**, generous **spacing**, avoid flat “template” blocks (custom section rhythm, not only alternating gray bands).
-- [ ] **A3** **Smooth scroll** for in-page anchors (`html` / CSS or JS — pick one consistent approach).
-- [ ] **A4** **Reveal animations**: fade / slide-in for sections (subtle; respect performance).
-- [ ] **A5** **Micro-interactions**: button hover/active states, card hover (lift/glow), link underline or color transitions.
-- [ ] **A6** **i18n architecture**: English + Croatian strings (JSON or TS objects); **language toggle** in header (persists `localStorage` or cookie so choice survives refresh).
-- [ ] **A7** Primary CTA label: **“Zatraži besplatnu analizu”** in **Croatian** locale; **English equivalent** in EN (e.g. “Request a free analysis”) — same target (`#contact`).
+- [x] **A1** Keep **single page**, **dark theme**, **Geist** (and Geist Mono if used for labels/code snippets).
+- [x] **A2** Global styles: **glow**, **blur**, **gradients**, generous **spacing**, avoid flat “template” blocks (custom section rhythm, not only alternating gray bands).
+- [x] **A3** **Smooth scroll** for in-page anchors (`html` / CSS or JS — pick one consistent approach).
+- [x] **A4** **Reveal animations**: fade / slide-in for sections (subtle; respect performance).
+- [x] **A5** **Micro-interactions**: button hover/active states, card hover (lift/glow), link underline or color transitions.
+- [x] **A6** **i18n architecture**: English + Croatian strings (JSON or TS objects); **language toggle** in header (persists `localStorage` or cookie so choice survives refresh).
+- [x] **A7** Primary CTA label: **“Zatraži besplatnu analizu”** in **Croatian** locale; **English equivalent** in EN (e.g. “Request a free analysis”) — same target (`#contact`).
 
 ---
 
 ## Phase B — Sticky header & navigation
 
-- [ ] **B1** **Sticky header** with backdrop (blur + border) so content doesn’t clash while scrolling.
-- [ ] **B2** Desktop menu: **Services**, **About**, **Process**, **Testimonials**, **FAQ**, **Contact** → anchor IDs (`#services`, `#about`, `#process`, `#testimonials`, `#faq`, `#contact`).
-- [ ] **B3** **Active link** highlighting based on scroll position (Intersection Observer or similar).
-- [ ] **B4** **Mobile**: **hamburger** opening **sheet/drawer** with same links + CTA + language toggle.
-- [ ] **B5** **Portfolio**: section on page with id `#portfolio`; link from footer (and optional secondary CTA) — **not** required in main 6-item nav unless you add it later.
+- [x] **B1** **Sticky header** with backdrop (blur + border) so content doesn’t clash while scrolling.
+- [x] **B2** Desktop menu: **Services**, **About**, **Process**, **Testimonials**, **FAQ**, **Contact** → anchor IDs (`#services`, `#about`, `#process`, `#testimonials`, `#faq`, `#contact`).
+- [x] **B3** **Active link** highlighting based on scroll position (Intersection Observer or similar).
+- [x] **B4** **Mobile**: **hamburger** opening **sheet/drawer** with same links + CTA + language toggle.
+- [x] **B5** **Portfolio**: section on page with id `#portfolio`; link from footer (and optional secondary CTA) — **not** required in main 6-item nav unless you add it later.
 
 ---
 
@@ -94,25 +94,25 @@
 
 ## Phase I — FAQ
 
-- [ ] **I1** Section id `#faq`; **accordion** UI.
-- [ ] **I2** Questions covering: what **free analysis** includes, timeline expectations, what client should prepare, what if they already have a site, **no pricing** reassurance, next steps after contact (EN/HR).
+- [x] **I1** Section id `#faq`; **accordion** UI.
+- [x] **I2** Questions covering: what **free analysis** includes, timeline expectations, what client should prepare, what if they already have a site, **no pricing** reassurance, next steps after contact (EN/HR).
 
 ---
 
 ## Phase J — Contact
 
-- [ ] **J1** Section id `#contact`; **fast** layout: short intro + **both emails** prominently.
-- [ ] **J2** Form: name, email, message (and optional subject) — **submit behavior** wired when backend exists; for now UI-only or stub as per your stack.
-- [ ] **J3** No pricing tables; single clear **primary CTA** repeated from hero/header.
+- [x] **J1** Section id `#contact`; **fast** layout: short intro + **both emails** prominently.
+- [x] **J2** Form: name, email, message (and optional subject) — **submit behavior** wired when backend exists; for now UI-only or stub as per your stack.
+- [x] **J3** No pricing tables; single clear **primary CTA** repeated from hero/header.
 
 ---
 
 ## Phase K — Footer & legal
 
-- [ ] **K1** **Real anchor links** to all main sections (including `#portfolio` if present).
-- [ ] **K2** Links to **`/privacy`** and **`/terms`** (dedicated routes or static pages).
-- [ ] **K3** **Privacy** and **Terms** pages: placeholder structured content (you’ll replace with legal review later).
-- [ ] **K4** Copyright year + **VMN – Visual Marketing Network** tagline.
+- [x] **K1** **Real anchor links** to all main sections (including `#portfolio` if present).
+- [x] **K2** Links to **`/privacy`** and **`/terms`** (dedicated routes or static pages).
+- [x] **K3** **Privacy** and **Terms** pages: placeholder structured content (you’ll replace with legal review later).
+- [x] **K4** Copyright year + **VMN – Visual Marketing Network** tagline.
 
 ---
 
@@ -137,17 +137,17 @@
 
 | Phase | Name | Status |
 |-------|------|--------|
-| A | Foundation & i18n | ☐ |
-| B | Header & nav | ☐ |
+| A | Foundation & i18n | ☑ |
+| B | Header & nav | ☑ |
 | C | Hero | ☑ |
 | D | Services | ☑ |
 | E | About | ☑ |
 | F | Process timeline | ☑ |
 | G | Portfolio (placeholders) | ☑ |
 | H | Testimonials + carousel | ☑ |
-| I | FAQ | ☐ |
-| J | Contact | ☐ |
-| K | Footer & legal pages | ☐ |
+| I | FAQ | ☑ |
+| J | Contact | ☑ |
+| K | Footer & legal pages | ☑ |
 | L | SEO / meta | ☑ |
 | M | Polish | ☑ |
 
