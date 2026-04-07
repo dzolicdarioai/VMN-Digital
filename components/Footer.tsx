@@ -7,72 +7,57 @@ import { useLocale } from '@/components/locale-provider'
 export default function Footer() {
   const { t } = useLocale()
   const year = new Date().getFullYear()
-  const copyright = t.footer.copyright.replace('{year}', String(year))
+  const copyright = t.footer.copyright
+    .replace('{year}', String(year))
+    .replace('{brandLine}', t.footer.brandLine)
+
+  const navLinks = [
+    { href: '#services', label: t.footer.linkServices },
+    { href: '#about', label: t.footer.linkAbout },
+    { href: '#process', label: t.footer.linkProcess },
+    { href: '#testimonials', label: t.footer.linkTestimonials },
+    { href: '#portfolio', label: t.footer.linkPortfolio },
+    { href: '#faq', label: t.footer.linkFaq },
+    { href: '#contact', label: t.footer.linkContact },
+  ] as const
 
   return (
     <footer className="border-t border-border/60 bg-card/40 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-10 mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div>
-            <div className="text-xl font-bold mb-4">
+            <div className="text-xl font-bold mb-2">
               <span className="text-primary">VMN</span>
               <span className="text-foreground ml-2">Digital</span>
             </div>
+            <p className="text-foreground/70 text-sm font-medium mb-3">{t.footer.brandLine}</p>
             <p className="text-foreground/60 text-sm leading-relaxed">{t.footer.tagline}</p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">{t.footer.colServices}</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t.footer.colNavigate}</h3>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li>
-                <Link href="#services" className="link-subtle">
-                  {t.footer.linkWebDesign}
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="link-subtle">
-                  {t.footer.linkPerformance}
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="link-subtle">
-                  {t.footer.linkConsultation}
-                </Link>
-              </li>
+              {navLinks.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="link-subtle">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-foreground mb-4">{t.footer.colCompany}</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t.footer.colLegal}</h3>
             <ul className="space-y-2 text-sm text-foreground/60">
               <li>
-                <Link href="#about" className="link-subtle">
-                  {t.footer.linkAbout}
+                <Link href="/privacy" className="link-subtle">
+                  {t.footer.linkPrivacy}
                 </Link>
               </li>
               <li>
-                <Link href="#process" className="link-subtle">
-                  {t.footer.linkProcess}
-                </Link>
-              </li>
-              <li>
-                <Link href="#testimonials" className="link-subtle">
-                  {t.footer.linkTestimonials}
-                </Link>
-              </li>
-              <li>
-                <Link href="#portfolio" className="link-subtle">
-                  {t.footer.linkPortfolio}
-                </Link>
-              </li>
-              <li>
-                <Link href="#faq" className="link-subtle">
-                  {t.footer.linkFaq}
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="link-subtle">
-                  {t.footer.linkContact}
+                <Link href="/terms" className="link-subtle">
+                  {t.footer.linkTerms}
                 </Link>
               </li>
             </ul>

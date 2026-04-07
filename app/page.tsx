@@ -1,16 +1,19 @@
 'use client'
 
+import dynamic from 'next/dynamic'
+
 import AboutUs from '@/components/AboutUs'
-import ContactUs from '@/components/ContactUs'
-import Faq from '@/components/Faq'
-import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
-import Portfolio from '@/components/Portfolio'
-import Process from '@/components/Process'
 import { Reveal } from '@/components/reveal'
 import Services from '@/components/Services'
-import Testimonials from '@/components/Testimonials'
+import Process from '@/components/Process'
+
+const Portfolio = dynamic(() => import('@/components/Portfolio'))
+const Testimonials = dynamic(() => import('@/components/Testimonials'))
+const Faq = dynamic(() => import('@/components/Faq'))
+const ContactUs = dynamic(() => import('@/components/ContactUs'))
+const Footer = dynamic(() => import('@/components/Footer'))
 
 export default function Home() {
   return (
@@ -29,10 +32,10 @@ export default function Home() {
         <Process />
       </Reveal>
       <Reveal>
-        <Testimonials />
+        <Portfolio />
       </Reveal>
       <Reveal>
-        <Portfolio />
+        <Testimonials />
       </Reveal>
       <Reveal>
         <Faq />

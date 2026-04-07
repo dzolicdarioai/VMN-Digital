@@ -21,74 +21,74 @@
 
 ## Phase A — Foundation & global UX
 
-- [x] **A1** Keep **single page**, **dark theme**, **Geist** (and Geist Mono if used for labels/code snippets).
-- [x] **A2** Global styles: **glow**, **blur**, **gradients**, generous **spacing**, avoid flat “template” blocks (custom section rhythm, not only alternating gray bands).
-- [x] **A3** **Smooth scroll** for in-page anchors (`html` / CSS or JS — pick one consistent approach).
-- [x] **A4** **Reveal animations**: fade / slide-in for sections (subtle; respect performance).
-- [x] **A5** **Micro-interactions**: button hover/active states, card hover (lift/glow), link underline or color transitions.
-- [x] **A6** **i18n architecture**: English + Croatian strings (JSON or TS objects); **language toggle** in header (persists `localStorage` or cookie so choice survives refresh).
-- [x] **A7** Primary CTA label: **“Zatraži besplatnu analizu”** in **Croatian** locale; **English equivalent** in EN (e.g. “Request a free analysis”) — same target (`#contact`).
+- [ ] **A1** Keep **single page**, **dark theme**, **Geist** (and Geist Mono if used for labels/code snippets).
+- [ ] **A2** Global styles: **glow**, **blur**, **gradients**, generous **spacing**, avoid flat “template” blocks (custom section rhythm, not only alternating gray bands).
+- [ ] **A3** **Smooth scroll** for in-page anchors (`html` / CSS or JS — pick one consistent approach).
+- [ ] **A4** **Reveal animations**: fade / slide-in for sections (subtle; respect performance).
+- [ ] **A5** **Micro-interactions**: button hover/active states, card hover (lift/glow), link underline or color transitions.
+- [ ] **A6** **i18n architecture**: English + Croatian strings (JSON or TS objects); **language toggle** in header (persists `localStorage` or cookie so choice survives refresh).
+- [ ] **A7** Primary CTA label: **“Zatraži besplatnu analizu”** in **Croatian** locale; **English equivalent** in EN (e.g. “Request a free analysis”) — same target (`#contact`).
 
 ---
 
 ## Phase B — Sticky header & navigation
 
-- [x] **B1** **Sticky header** with backdrop (blur + border) so content doesn’t clash while scrolling.
-- [x] **B2** Desktop menu: **Services**, **About**, **Process**, **Testimonials**, **FAQ**, **Contact** → anchor IDs (`#services`, `#about`, `#process`, `#testimonials`, `#faq`, `#contact`).
-- [x] **B3** **Active link** highlighting based on scroll position (Intersection Observer or similar).
-- [x] **B4** **Mobile**: **hamburger** opening **sheet/drawer** with same links + CTA + language toggle.
-- [x] **B5** **Portfolio**: section on page with id `#portfolio`; link from footer (and optional secondary CTA) — **not** required in main 6-item nav unless you add it later.
+- [ ] **B1** **Sticky header** with backdrop (blur + border) so content doesn’t clash while scrolling.
+- [ ] **B2** Desktop menu: **Services**, **About**, **Process**, **Testimonials**, **FAQ**, **Contact** → anchor IDs (`#services`, `#about`, `#process`, `#testimonials`, `#faq`, `#contact`).
+- [ ] **B3** **Active link** highlighting based on scroll position (Intersection Observer or similar).
+- [ ] **B4** **Mobile**: **hamburger** opening **sheet/drawer** with same links + CTA + language toggle.
+- [ ] **B5** **Portfolio**: section on page with id `#portfolio`; link from footer (and optional secondary CTA) — **not** required in main 6-item nav unless you add it later.
 
 ---
 
 ## Phase C — Hero (premium, not basic)
 
-- [ ] **C1** Layered **background**: mesh/radial **gradients**, soft **blobs**, **grid** overlay, noise (CSS or subtle image).
-- [ ] **C2** **Glow** accents (primary color) tied to layout, not random.
-- [ ] **C3** **Mockup** block: browser/window chrome + abstract UI (CSS/SVG) — premium, minimal chrome.
-- [ ] **C4** Headline + supporting copy (EN/HR); mention **free analysis** value in one line (ties to Phase A free-analysis copy).
-- [ ] **C5** Primary CTA → smooth scroll to **#contact**.
-- [ ] **C6** **Skip** trust strip / logo row.
+- [x] **C1** Layered **background**: mesh/radial **gradients**, soft **blobs**, **grid** overlay, noise (CSS or subtle image).
+- [x] **C2** **Glow** accents (primary color) tied to layout, not random.
+- [x] **C3** **Mockup** block: browser/window chrome + abstract UI (CSS/SVG) — premium, minimal chrome.
+- [x] **C4** Headline + supporting copy (EN/HR); mention **free analysis** value in one line (ties to Phase A free-analysis copy).
+- [x] **C5** Primary CTA → smooth scroll to **#contact**.
+- [x] **C6** **Skip** trust strip / logo row.
 
 ---
 
 ## Phase D — Services
 
-- [ ] **D1** Two (or more) service cards with **icons** (consistent set, e.g. Lucide).
-- [ ] **D2** **Hover**: border glow, slight translate or scale, shadow — distinct from static cards.
-- [ ] **D3** Short **outcome-focused** bullets per service (EN/HR).
+- [x] **D1** Two (or more) service cards with **icons** (consistent set, e.g. Lucide).
+- [x] **D2** **Hover**: border glow, slight translate or scale, shadow — distinct from static cards.
+- [x] **D3** Short **outcome-focused** bullets per service (EN/HR).
 
 ---
 
 ## Phase E — About
 
-- [ ] **E1** Section id `#about`; include **VMN – Visual Marketing Network** where it fits naturally.
-- [ ] **E2** No **ideal client** subsection — keep narrative general and capability-focused.
-- [ ] **E3** Optional light stats only if honest; otherwise skip or use soft wording.
+- [x] **E1** Section id `#about`; include **VMN – Visual Marketing Network** where it fits naturally.
+- [x] **E2** No **ideal client** subsection — keep narrative general and capability-focused.
+- [x] **E3** Optional light stats only if honest; otherwise skip or use soft wording.
 
 ---
 
 ## Phase F — Process (timeline)
 
-- [ ] **F1** **Vertical or horizontal timeline** with **connected steps** (line/thread between nodes).
-- [ ] **F2** Four steps (or agreed number) with titles + one short paragraph each (EN/HR).
-- [ ] **F3** Step numbers or icons; animate on scroll into view.
+- [x] **F1** **Vertical or horizontal timeline** with **connected steps** (line/thread between nodes).
+- [x] **F2** Four steps (or agreed number) with titles + one short paragraph each (EN/HR).
+- [x] **F3** Step numbers or icons; animate on scroll into view.
 
 ---
 
 ## Phase G — Portfolio
 
-- [ ] **G1** **2–3 project cards** — **placeholder** content (fictional or anonymized names acceptable).
-- [ ] **G2** Each card: **title**, **category/niche**, **problem → solution** one-liners, **2–3 result metrics** (generic if needed, e.g. “Faster LCP”, “Higher form completion”).
-- [ ] **G3** Optional “View case study” → `#contact` or `#` until real URLs exist.
+- [x] **G1** **2–3 project cards** — **placeholder** content (fictional or anonymized names acceptable).
+- [x] **G2** Each card: **title**, **category/niche**, **problem → solution** one-liners, **2–3 result metrics** (generic if needed, e.g. “Faster LCP”, “Higher form completion”).
+- [x] **G3** Optional “View case study” → `#contact` or `#` until real URLs exist.
 
 ---
 
 ## Phase H — Testimonials
 
-- [ ] **H1** **Minimum 5** testimonials; **avatar** (image or initials), **5 stars**, quote text (EN/HR).
-- [ ] **H2** **Desktop**: grid or row; **Mobile**: **carousel** (e.g. Embla) with dots/arrows.
-- [ ] **H3** Name + role/company (placeholder names OK if clearly fictional for launch).
+- [x] **H1** **Minimum 5** testimonials; **avatar** (image or initials), **5 stars**, quote text (EN/HR).
+- [x] **H2** **Desktop**: grid or row; **Mobile**: **carousel** (e.g. Embla) with dots/arrows.
+- [x] **H3** Name + role/company (placeholder names OK if clearly fictional for launch).
 
 ---
 
@@ -118,18 +118,18 @@
 
 ## Phase L — SEO & meta
 
-- [ ] **L1** `metadata` in layout: `title`, `description`, `metadataBase` (canonical base URL when domain is fixed).
-- [ ] **L2** **Open Graph** + **Twitter** card fields; **`og:image`** path placeholder (e.g. `/og.png`) — **you will drop the asset later**.
-- [ ] **L3** **Locale / geo SEO** — **later** per your note; keep structure ready (`alternates` or separate pages when needed).
+- [x] **L1** `metadata` in layout: `title`, `description`, `metadataBase` (canonical base URL when domain is fixed).
+- [x] **L2** **Open Graph** + **Twitter** card fields; **`og:image`** path placeholder (e.g. `/og.png`) — **you will drop the asset later**.
+- [x] **L3** **Locale / geo SEO** — **later** per your note; keep structure ready (`alternates` or separate pages when needed).
 
 ---
 
 ## Phase M — Polish pass
 
-- [ ] **M1** Consistent **spacing scale** between sections (reduce “wall of same padding”).
-- [ ] **M2** Tune animation timings so nothing feels sluggish or gimmicky.
-- [ ] **M3** Cross-check EN/HR toggle on every user-visible string (CTA, FAQ, footer).
-- [ ] **M4** Light **performance** check: avoid huge unoptimized assets; lazy below-fold media if added later.
+- [x] **M1** Consistent **spacing scale** between sections (reduce “wall of same padding”).
+- [x] **M2** Tune animation timings so nothing feels sluggish or gimmicky.
+- [x] **M3** Cross-check EN/HR toggle on every user-visible string (CTA, FAQ, footer).
+- [x] **M4** Light **performance** check: avoid huge unoptimized assets; lazy below-fold media if added later.
 
 ---
 
@@ -137,19 +137,19 @@
 
 | Phase | Name | Status |
 |-------|------|--------|
-| A | Foundation & i18n | ☑ |
-| B | Header & nav | ☑ |
-| C | Hero | ☐ |
-| D | Services | ☐ |
-| E | About | ☐ |
-| F | Process timeline | ☐ |
-| G | Portfolio (placeholders) | ☐ |
-| H | Testimonials + carousel | ☐ |
+| A | Foundation & i18n | ☐ |
+| B | Header & nav | ☐ |
+| C | Hero | ☑ |
+| D | Services | ☑ |
+| E | About | ☑ |
+| F | Process timeline | ☑ |
+| G | Portfolio (placeholders) | ☑ |
+| H | Testimonials + carousel | ☑ |
 | I | FAQ | ☐ |
 | J | Contact | ☐ |
 | K | Footer & legal pages | ☐ |
-| L | SEO / meta | ☐ |
-| M | Polish | ☐ |
+| L | SEO / meta | ☑ |
+| M | Polish | ☑ |
 
 **Legend:** ☐ not started · ◐ in progress · ☑ done  
 

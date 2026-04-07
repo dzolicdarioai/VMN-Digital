@@ -75,7 +75,7 @@
   .btn-primary {
     @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold text-primary-foreground;
     @apply bg-primary shadow-[0_0_0_1px_rgb(102_252_241_/_0.35),0_4px_24px_-8px_rgb(102_252_241_/_0.55)];
-    @apply transition-all duration-300 ease-out;
+    @apply transition-all duration-[250ms] ease-out;
     @apply hover:bg-primary/92 hover:shadow-[0_0_0_1px_rgb(102_252_241_/_0.5),0_8px_32px_-6px_rgb(102_252_241_/_0.45)];
     @apply hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
@@ -93,6 +93,15 @@
 
   .section-padding-tight {
     @apply py-16 md:py-24 lg:py-28 px-4 md:px-8;
+  }
+
+  /* Mid rhythm between tight and default — breaks uniform vertical padding */
+  .section-padding-alt {
+    @apply py-[4.25rem] md:py-[6.25rem] lg:py-[7.25rem] px-4 md:px-8;
+  }
+
+  .section-hero {
+    @apply section-padding pb-16 md:pb-20 lg:pb-24;
   }
 
   .section-surface {
@@ -116,13 +125,33 @@
 
   .card-interactive {
     @apply rounded-lg border border-border/80 bg-background/80 backdrop-blur-sm;
-    @apply transition-all duration-300 ease-out;
+    @apply transition-all duration-[250ms] ease-out;
     @apply hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_12px_40px_-16px_rgb(102_252_241_/_0.25)];
+  }
+
+  /* Services: stronger hover (glow + lift + scale) vs generic cards */
+  .service-card {
+    @apply rounded-xl border border-border/80 bg-background/75 backdrop-blur-sm;
+    @apply transition-all duration-[250ms] ease-out;
+    @apply hover:-translate-y-1.5 hover:scale-[1.02];
+    @apply hover:border-primary/50;
+    box-shadow: 0 4px 24px -12px rgb(0 0 0 / 0.45);
+  }
+
+  .service-card:hover {
+    box-shadow:
+      0 0 0 1px rgb(102 252 241 / 0.12),
+      0 20px 48px -24px rgb(102 252 241 / 0.28),
+      0 12px 40px -16px rgb(0 0 0 / 0.5);
   }
 
   @media (prefers-reduced-motion: reduce) {
     .card-interactive {
       @apply hover:translate-y-0;
+    }
+
+    .service-card {
+      @apply hover:translate-y-0 hover:scale-100;
     }
   }
 

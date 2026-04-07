@@ -14,34 +14,13 @@ const en = {
   header: {
     brand: 'VMN Digital',
   },
-  nav: {
-    services: 'Services',
-    about: 'About',
-    process: 'Process',
-    testimonials: 'Testimonials',
-    faq: 'FAQ',
-    contact: 'Contact',
-  },
-  navMenu: 'Menu',
-  portfolio: {
-    titleBefore: 'Selected ',
-    titleHighlight: 'work',
-    intro:
-      'Placeholder projects — real case studies will appear here as they become available.',
-  },
-  faq: {
-    titleBefore: 'Frequently asked ',
-    titleHighlight: 'questions',
-    intro:
-      'Short answers for now — a full FAQ accordion will follow in a later phase.',
-    placeholder:
-      'We are preparing detailed answers about the free analysis, timelines, and what to prepare before we start.',
-  },
   hero: {
     titleBefore: 'Web design that ',
     titleHighlight: 'drives results',
     subtitle:
       'We create modern, responsive websites that help your business grow. From concept to launch, we deliver quality web solutions tailored to your unique needs.',
+    analysisLine:
+      'Start with a free analysis—a quick review of your site, goals, and clear next steps before you commit to anything.',
   },
   services: {
     titleBefore: 'Our ',
@@ -52,25 +31,69 @@ const en = {
       {
         title: 'Web design',
         description:
-          'Custom web design tailored to your brand. We build responsive, modern websites that look great on all devices and engage your audience. Every design decision supports your business objectives.',
+          'Custom sites aligned with your brand—built to look sharp and move visitors toward action.',
+        bullets: [
+          'Clearer positioning and trust signals where it matters',
+          'Smoother paths to contact and conversion on key pages',
+          'Consistent experience from mobile to desktop',
+        ],
       },
       {
         title: 'Performance improvement',
         description:
-          'Optimize your existing website for better speed, user experience, and search rankings. We identify and fix performance bottlenecks so your site runs efficiently and keeps visitors engaged.',
+          'Speed and technical health upgrades for sites that already exist—so they feel fast and stay maintainable.',
+        bullets: [
+          'Shorter load times and stronger Core Web Vitals',
+          'Less friction so visitors stay instead of bouncing',
+          'A cleaner technical base for SEO and growth',
+        ],
       },
     ],
   },
   about: {
     titleBefore: 'About ',
     titleHighlight: 'VMN Digital',
-    p1: 'VMN Digital is a dedicated web design agency committed to helping businesses establish and strengthen their online presence. We believe that a well-designed website is more than an aesthetic achievement—it is a strategic tool for business growth.',
-    p2: 'With a focus on modern design principles, user experience, and technical excellence, we work with businesses of all sizes to create websites that not only look beautiful but also perform exceptionally. Our approach combines creative vision with practical strategy to deliver solutions that drive measurable results.',
-    p3: 'We understand that every business is unique. That is why we take time to understand your goals, your audience, and your industry before we start designing. This personalized approach ensures that every project we undertake is a true reflection of your brand and vision.',
-    statValues: ['100+', '50+', '5+'] as const,
-    stat1: 'Projects completed',
-    stat2: 'Happy clients',
-    stat3: 'Years experience',
+    brandLine: 'VMN – Visual Marketing Network',
+    p1: 'VMN Digital is the web practice behind VMN – Visual Marketing Network: a focused team helping businesses establish and strengthen their online presence. We believe that a well-designed website is more than an aesthetic achievement—it is a strategic tool for business growth.',
+    p2: 'With a focus on modern design principles, user experience, and technical excellence, we work with organizations of different sizes to create websites that look sharp and perform reliably. Our approach combines creative vision with practical strategy so your site supports real business outcomes.',
+    p3: 'Every business context is different. We invest time in understanding your goals, audience, and industry before design work begins—so the result reflects your brand with clarity and purpose.',
+    softPoints: [
+      'Strategy-first thinking from discovery to launch',
+      'Performance and UX considered in every build',
+      'Clear, steady communication throughout the project',
+    ],
+  },
+  portfolio: {
+    titleBefore: 'Selected ',
+    titleHighlight: 'work',
+    intro:
+      'Placeholder case studies—illustrative examples of how we approach problems and outcomes. Real client stories will replace these when available.',
+    problemLabel: 'Problem',
+    solutionLabel: 'Solution',
+    caseStudyCta: 'View case study',
+    items: [
+      {
+        title: 'Regional HVAC services',
+        category: 'Local services',
+        problem: 'Slow pages and unclear service areas were costing leads on mobile.',
+        solution: 'Restructured IA, stronger local proof, and performance-focused templates.',
+        metrics: ['Faster LCP on key pages', 'Higher form completion', 'Clearer service-area UX'],
+      },
+      {
+        title: 'B2B analytics product',
+        category: 'SaaS',
+        problem: 'Visitors struggled to understand the product value within the first screen.',
+        solution: 'Sharper hero narrative, modular sections, and focused conversion paths.',
+        metrics: ['Stronger scroll depth on hero', 'More demo requests', 'Reduced bounce on pricing'],
+      },
+      {
+        title: 'Independent fashion retail',
+        category: 'E-commerce',
+        problem: 'Checkout felt heavy and product discovery was weaker on phones.',
+        solution: 'Streamlined PDP/checkout flow and lighter assets on mobile breakpoints.',
+        metrics: ['Smoother mobile checkout', 'Better category browse', 'Stable Core Web Vitals'],
+      },
+    ],
   },
   process: {
     titleBefore: 'Our ',
@@ -104,25 +127,74 @@ const en = {
       },
     ],
   },
+  faq: {
+    titleBefore: 'Frequently asked ',
+    titleHighlight: 'questions',
+    intro:
+      'Straight answers about how we work, what the free analysis covers, and what to expect—without pricing tables or surprises.',
+    items: [
+      {
+        q: 'What does the free analysis include?',
+        a: 'A focused review of your current site (or goals if you are pre-launch), your audience and objectives, and quick wins versus bigger bets. You get clear next steps—whether or not we work together afterward.',
+      },
+      {
+        q: 'What timeline should I expect?',
+        a: 'Timelines depend on scope: a focused landing refresh differs from a multi-section build. After the first conversation we outline phases and realistic milestones. We prioritize clarity over vague “ASAP” promises.',
+      },
+      {
+        q: 'What should I prepare before we talk?',
+        a: 'Optional but helpful: links to your site or references you like, who the site is for, and what “success” means (leads, bookings, credibility, etc.). No perfect brief required—we help you shape it.',
+      },
+      {
+        q: 'I already have a website—can you still help?',
+        a: 'Yes. Many projects are redesigns, performance work, or restructuring existing content. We assess what to keep, what to rebuild, and how to get the best outcome without starting from zero unless it makes sense.',
+      },
+      {
+        q: 'Do you list pricing on this site?',
+        a: 'No. Scope varies too much to quote responsibly from a table. After we understand your goals, we propose a clear path and engagement—no surprise fees baked into fine print.',
+      },
+      {
+        q: 'What happens after I contact you?',
+        a: 'We reply by email, usually with a few clarifying questions or a short call proposal. From there we align on next steps, timing, and whether a formal proposal makes sense.',
+      },
+    ],
+  },
   testimonials: {
     titleBefore: 'What our ',
     titleHighlight: 'clients say',
-    intro: 'Real feedback from businesses we have helped succeed online.',
+    carouselDotsLabel: 'Testimonial slides',
+    intro:
+      'Placeholder quotes for launch—fictional names and companies. We will feature verified testimonials when permissions are in place.',
     items: [
       {
-        name: 'Sarah Johnson',
-        company: 'Tech Solutions Inc.',
-        text: 'VMN Digital transformed our online presence. Their attention to detail and professional approach resulted in a website that exceeded our expectations. Highly recommend!',
+        name: 'Alex Morgan',
+        role: 'VP Marketing',
+        company: 'Harborline Systems',
+        text: 'They reframed our story on the homepage and tightened the path to contact. We saw clearer engagement within weeks—not just prettier pages.',
       },
       {
-        name: 'Michael Chen',
-        company: 'Digital Marketing Co.',
-        text: 'Working with VMN Digital was a seamless experience. They understood our vision and delivered a modern, responsive website that has significantly improved our client engagement.',
+        name: 'Jordan Blake',
+        role: 'Founder',
+        company: 'Brightfield Studio',
+        text: 'Fast communication, thoughtful structure, and a site that finally matches how we pitch in the room. Exactly the partner we needed.',
       },
       {
-        name: 'Emma Rodriguez',
-        company: 'Creative Studio',
-        text: 'The team at VMN Digital is professional, responsive, and talented. They not only built our website but provided valuable insights on optimizing our web strategy. Outstanding service!',
+        name: 'Priya Nair',
+        role: 'Operations Lead',
+        company: 'Northwind Logistics',
+        text: 'Performance and clarity both improved. Forms are easier to complete and the team actually uses the new content hierarchy.',
+      },
+      {
+        name: 'Tomás Silva',
+        role: 'E-commerce Manager',
+        company: 'Urban Threads Co.',
+        text: 'Mobile checkout used to feel fragile; now it feels intentional. Metrics aside, customers comment that the shop feels more trustworthy.',
+      },
+      {
+        name: 'Nina Kovač',
+        role: 'Head of Marketing',
+        company: 'Adriatic Craft Co.',
+        text: 'VMN Digital balanced design ambition with practical constraints. Launch was smooth and we still iterate with a clear component system.',
       },
     ],
   },
@@ -138,27 +210,91 @@ const en = {
       namePlaceholder: 'John Doe',
       email: 'Email address',
       emailPlaceholder: 'you@example.com',
+      subject: 'Subject (optional)',
+      subjectPlaceholder: 'e.g. Website redesign',
       message: 'Message',
       messagePlaceholder: 'Tell us about your project…',
       submit: 'Send message',
+      stubAfterSubmit:
+        'Thanks — your message was not sent yet. A contact backend is not connected; please use the email addresses above for now.',
+    },
+  },
+  legal: {
+    backToSite: '← VMN Digital',
+    privacy: {
+      title: 'Privacy Policy',
+      badge: 'Placeholder — replace after legal review',
+      intro:
+        'This page outlines how VMN Digital may handle information in general terms. It is not legal advice. Replace this content with counsel-approved text before production.',
+      sections: [
+        {
+          heading: 'Who we are',
+          body: 'VMN Digital operates as part of VMN – Visual Marketing Network. Contact details appear on the main site’s contact section.',
+        },
+        {
+          heading: 'Information you provide',
+          body: 'If you use a contact form or email, you may provide identifiers such as your name, email address, and message content so we can respond.',
+        },
+        {
+          heading: 'How we use information',
+          body: 'We use inquiries to communicate about your request and related services. We do not sell personal data. Retention and subprocessors should be described here after review.',
+        },
+        {
+          heading: 'Cookies & analytics',
+          body: 'If the site uses analytics or cookies, describe categories and choices here. Update when tooling is finalized.',
+        },
+        {
+          heading: 'Your rights & contact',
+          body: 'Depending on your region, you may have rights to access or delete personal data. Add jurisdiction-specific rights and a contact channel for privacy requests after legal review.',
+        },
+      ],
+    },
+    terms: {
+      title: 'Terms of Service',
+      badge: 'Placeholder — replace after legal review',
+      intro:
+        'These terms are a non-binding placeholder for structuring your future legal page. Have them reviewed before launch.',
+      sections: [
+        {
+          heading: 'Use of this website',
+          body: 'Content is provided for general information. We may update pages, features, or availability without notice.',
+        },
+        {
+          heading: 'No professional advice',
+          body: 'Nothing on this site constitutes legal, financial, or other professional advice. Engagements are governed by separate agreements when you work with us.',
+        },
+        {
+          heading: 'Intellectual property',
+          body: 'Branding, copy, and design elements on this site are owned by VMN Digital or licensors unless stated otherwise. Do not reuse without permission.',
+        },
+        {
+          heading: 'Limitation of liability',
+          body: 'To the extent permitted by law, VMN Digital is not liable for indirect or consequential damages arising from use of the site. Refine this clause with counsel.',
+        },
+        {
+          heading: 'Governing law',
+          body: 'Add the appropriate jurisdiction and dispute resolution process after legal review.',
+        },
+      ],
     },
   },
   footer: {
     tagline:
       'Transforming businesses through premium web design and digital solutions.',
-    colServices: 'Services',
-    colCompany: 'Company',
+    brandLine: 'VMN – Visual Marketing Network',
+    colNavigate: 'On this page',
+    colLegal: 'Legal',
     colContact: 'Contact',
-    linkWebDesign: 'Web design',
-    linkPerformance: 'Performance improvement',
-    linkConsultation: 'Consultation',
-    linkAbout: 'About us',
-    linkProcess: 'Our process',
+    linkServices: 'Services',
+    linkAbout: 'About',
+    linkProcess: 'Process',
     linkTestimonials: 'Testimonials',
-    linkFaq: 'FAQ',
     linkPortfolio: 'Portfolio',
+    linkFaq: 'FAQ',
     linkContact: 'Contact',
-    copyright: '© {year} VMN Digital. All rights reserved.',
+    linkPrivacy: 'Privacy Policy',
+    linkTerms: 'Terms of Service',
+    copyright: '© {year} VMN Digital · {brandLine}. All rights reserved.',
   },
 } as const
 
@@ -174,34 +310,13 @@ const hr = {
   header: {
     brand: 'VMN Digital',
   },
-  nav: {
-    services: 'Usluge',
-    about: 'O nama',
-    process: 'Proces',
-    testimonials: 'Iskustva',
-    faq: 'ČPP',
-    contact: 'Kontakt',
-  },
-  navMenu: 'Izbornik',
-  portfolio: {
-    titleBefore: 'Odabrani ',
-    titleHighlight: 'projekti',
-    intro:
-      'Zamjenski projekti — stvarni case studyji bit će ovdje kad budu dostupni.',
-  },
-  faq: {
-    titleBefore: 'Često postavljana ',
-    titleHighlight: 'pitanja',
-    intro:
-      'Kratki odgovori za sada — puni FAQ s akordeonom slijedi u kasnijoj fazi.',
-    placeholder:
-      'Pripremamo detaljne odgovore o besplatnoj analizi, rokovima i što pripremiti prije početka.',
-  },
   hero: {
     titleBefore: 'Web dizajn koji ',
     titleHighlight: 'donosi rezultate',
     subtitle:
       'Stvaramo moderne, responzivne web stranice koje pomažu vašem poslovanju. Od koncepta do lansiranja isporučujemo kvalitetna rješenja prilagođena vašim potrebama.',
+    analysisLine:
+      'Započnite besplatnom analizom—brz pregled stranice, ciljeva i jasnih sljedećih koraka prije bilo kakve obveze.',
   },
   services: {
     titleBefore: 'Naše ',
@@ -212,25 +327,69 @@ const hr = {
       {
         title: 'Web dizajn',
         description:
-          'Prilagođen web dizajn u skladu s vašim brendom. Gradimo moderne, responzivne stranice koje izgledaju odlično na svim uređajima i angažiraju posjetitelje. Svaka odluka o dizajn podržava vaše poslovne ciljeve.',
+          'Prilagođene stranice u skladu s brendom—izrađene da izgledaju uredno i potaknu posjetitelje na akciju.',
+        bullets: [
+          'Jasnije pozicioniranje i signali povjerenja tamo gdje je bitno',
+          'Glatkiji putovi do kontakta i konverzije na ključnim stranicama',
+          'Dosljedno iskustvo od mobitela do desktopa',
+        ],
       },
       {
         title: 'Poboljšanje performansi',
         description:
-          'Optimizirajte postojeću stranicu radi bolje brzine, korisničkog iskustva i SEO-a. Otklanjamo uska grla kako bi stranica bila učinkovita i zadržala posjetitelje.',
+          'Nadogradnje brzine i tehničkog zdravlja za postojeće stranice—da budu brze i održive.',
+        bullets: [
+          'Kraće vrijeme učitavanja i jači Core Web Vitals',
+          'Manje trenja kako bi posjetitelji ostali na stranici',
+          'Čišlja tehnička osnova za SEO i rast',
+        ],
       },
     ],
   },
   about: {
     titleBefore: 'O ',
     titleHighlight: 'VMN Digitalu',
-    p1: 'VMN Digital je web agencija posvećena pomoći tvrtkama da izgrade i ojačaju svoju online prisutnost. Vjerujemo da dobro dizajnirana stranica nije samo estetika—ona je strateški alat za rast.',
-    p2: 'S fokusom na moderne principe dizajna, korisničko iskustvo i tehničku izvrsnost radimo s tvrtkama svih veličina kako bismo stvorili stranice koje ne samo da izgledaju odlično, nego i izvrsno funkcioniraju. Kombiniramo kreativnu viziju s praktičnom strategijom kako bismo donijeli mjerljive rezultate.',
-    p3: 'Svako je poslovanje jedinstveno. Zato prvo razumijemo vaše ciljeve, publiku i industriju prije nego što krenemo u dizajn. Tako osiguravamo da svaki projekt odražava vaš brend i viziju.',
-    statValues: ['100+', '50+', '5+'] as const,
-    stat1: 'Završenih projekata',
-    stat2: 'Zadovoljnih klijenata',
-    stat3: 'Godina iskustva',
+    brandLine: 'VMN – Visual Marketing Network',
+    p1: 'VMN Digital je web praksa unutar VMN – Visual Marketing Networka: fokusirani tim koji pomaže tvrtkama izgraditi i ojačati online prisutnost. Vjerujemo da dobro dizajnirana stranica nije samo estetika—ona je strateški alat za rast.',
+    p2: 'S naglaskom na moderne principe dizajna, korisničko iskustvo i tehničku izvrsnost radimo s organizacijama različitih veličina kako bismo izradili stranice koje izgledaju uredno i pouzdano rade. Kombiniramo kreativnu viziju s praktičnom strategijom kako bi vaša stranica podržavala stvarne poslovne ishode.',
+    p3: 'Svaki je kontekst drugačiji. Ulažemo vrijeme u razumijevanje vaših ciljeva, publike i industrije prije dizajna—kako bi rezultat jasno odražavao vaš brend.',
+    softPoints: [
+      'Strateško razmišljanje od istraživanja do lansiranja',
+      'Performanse i UX u svakoj fazi izrade',
+      'Jasna, dosljedna komunikacija tijekom projekta',
+    ],
+  },
+  portfolio: {
+    titleBefore: 'Odabrani ',
+    titleHighlight: 'projekti',
+    intro:
+      'Primjeri studija slučaja—ilustrativni prikazi pristupa i ishoda. Zamijenit ćemo ih stvarnim kad budu dostupni.',
+    problemLabel: 'Problem',
+    solutionLabel: 'Rješenje',
+    caseStudyCta: 'Pogledaj studiju slučaja',
+    items: [
+      {
+        title: 'Regionalne HVAC usluge',
+        category: 'Lokalne usluge',
+        problem: 'Sporo učitavanje i nejasna područja usluga koštala su leadove na mobitelu.',
+        solution: 'Nova informacijska arhitektura, jači lokalni dokazi i predlošci fokusirani na performanse.',
+        metrics: ['Brži LCP na ključnim stranicama', 'Viša stopa ispunjavanja formi', 'Jasnije područje usluga'],
+      },
+      {
+        title: 'B2B analitički proizvod',
+        category: 'SaaS',
+        problem: 'Posjetitelji nisu razumjeli vrijednost proizvoda na prvom ekranu.',
+        solution: 'Jači hero narativ, modularne sekcije i fokusirani putovi konverzije.',
+        metrics: ['Dublje skrolanje heroa', 'Više zahtjeva za demo', 'Manji bounce na cijenama'],
+      },
+      {
+        title: 'Neovisna modna trgovina',
+        category: 'E-trgovina',
+        problem: 'Blagajna je bila teška, a otkrivanje proizvoda slabije na mobitelu.',
+        solution: 'Pojednostavljen PDP/checkout i lakši resursi na mobilnim breakpointima.',
+        metrics: ['Glatkija mobilna blagajna', 'Bolje pregledavanje kategorija', 'Stabilni Core Web Vitals'],
+      },
+    ],
   },
   process: {
     titleBefore: 'Naš ',
@@ -264,25 +423,74 @@ const hr = {
       },
     ],
   },
+  faq: {
+    titleBefore: 'Često postavljena ',
+    titleHighlight: 'pitanja',
+    intro:
+      'Jasni odgovori o načinu rada, što uključuje besplatna analiza i što možete očekivati—bez cjenika i iznenađenja.',
+    items: [
+      {
+        q: 'Što uključuje besplatna analiza?',
+        a: 'Fokusirani pregled vaše trenutačne stranice (ili ciljeva ako još nemate lansiranje), publike i prioriteta te brzih dobitaka naspram većih zahvata. Dobivate jasne sljedeće korake—bez obveze nastavka suradnje.',
+      },
+      {
+        q: 'Kakva su očekivanja za rokove?',
+        a: 'Rokovi ovise o opsegu: osvježavanje landinga nije isto što i šira izgradnja. Nakon prvog razgovora definiramo faze i realne prekretnice. Izbjegavamo nejasna „čim prije“ obećanja.',
+      },
+      {
+        q: 'Što pripremiti prije razgovora?',
+        a: 'Nije obavezno, ali pomaže: poveznice na stranicu ili reference koje vam se sviđaju, tko je publika i što znači „uspjeh“ (upiti, rezervacije, kredibilitet itd.). Savršen brief nije potreban—pomažemo ga oblikovati.',
+      },
+      {
+        q: 'Već imam web stranicu—možete li pomoći?',
+        a: 'Da. Mnogi su projekti redizajni, performansne nadogradnje ili restrukturiranje sadržaja. Procjenjujemo što zadržati, što prepraviti i kako dobiti najbolji ishod bez „paljenja svega“ osim ako nema smisla.',
+      },
+      {
+        q: 'Objavljujete li cijene na stranici?',
+        a: 'Ne. Opseg varira previše za odgovorno cjenik na stranici. Nakon što razumijemo ciljeve, predlažemo jasan put i suradnju—bez skrivenih naknada u sitnom tisku.',
+      },
+      {
+        q: 'Što se događa nakon što vas kontaktiram?',
+        a: 'Odgovaramo e-poštom, često s par pitanja za pojašnjenje ili prijedlogom kratkog poziva. Zatim uskladimo sljedeće korake, vremenski okvir i treba li formalni prijedlog.',
+      },
+    ],
+  },
   testimonials: {
     titleBefore: 'Što kažu ',
     titleHighlight: 'klijenti',
-    intro: 'Stvarne povratne informacije tvrtki kojima smo pomogli online uspjeh.',
+    carouselDotsLabel: 'Slajdovi preporuka',
+    intro:
+      'Primjer citata za lansiranje—izmišljena imena i tvrtke. Zamijenit ćemo ih potvrđenim preporukama kad budu dostupne.',
     items: [
       {
-        name: 'Sarah Johnson',
-        company: 'Tech Solutions Inc.',
-        text: 'VMN Digital transformirao je našu online prisutnost. Pažnja prema detaljima i profesionalan pristup rezultirali su stranicom koja je nadmašila očekivanja. Topla preporuka!',
+        name: 'Alex Morgan',
+        role: 'VP marketinga',
+        company: 'Harborline Systems',
+        text: 'Preoblikovali su priču na početnoj stranici i zategli put do kontakta. Jasniji angažman već nakon nekoliko tjedana—ne samo ljepši izgled.',
       },
       {
-        name: 'Michael Chen',
-        company: 'Digital Marketing Co.',
-        text: 'Suradnja s VMN Digitalom bila je jednostavna. Razumjeli su našu viziju i isporučili modernu, responzivnu stranicu koja je značajno poboljšala angažman klijenata.',
+        name: 'Jordan Blake',
+        role: 'Osnivač',
+        company: 'Brightfield Studio',
+        text: 'Brza komunikacija, promišljena struktura i stranica koja konačno odgovara pitchu. Točno partnerstvo koje nam je trebalo.',
       },
       {
-        name: 'Emma Rodriguez',
-        company: 'Creative Studio',
-        text: 'Tim VMN Digitala profesionalan je, brz i talentiran. Ne samo da su izgradili stranicu, nego su dali i korisne smjernice za optimizaciju web strategije. Izvrsna usluga!',
+        name: 'Priya Nair',
+        role: 'Voditeljica operacija',
+        company: 'Northwind Logistics',
+        text: 'Performanse i jasnoća su bolje. Forme su jednostavnije, a tim stvarno koristi novu hijerarhiju sadržaja.',
+      },
+      {
+        name: 'Tomás Silva',
+        role: 'Voditelj e-trgovine',
+        company: 'Urban Threads Co.',
+        text: 'Mobilna blagajna je prije djelovala krhko; sada djeluje namjerno. Kupci kažu da trgovina djeluje pouzdanije.',
+      },
+      {
+        name: 'Nina Kovač',
+        role: 'Voditeljica marketinga',
+        company: 'Adriatic Craft Co.',
+        text: 'VMN Digital uravnotežio je dizajn ambiciju s praktičnim ograničenjima. Lansiranje je glatko, a i dalje iteriramo s jasnim sustavom komponenti.',
       },
     ],
   },
@@ -298,27 +506,91 @@ const hr = {
       namePlaceholder: 'Ivan Horvat',
       email: 'E-adresa',
       emailPlaceholder: 'vi@primjer.hr',
+      subject: 'Predmet (neobavezno)',
+      subjectPlaceholder: 'npr. Redizajn stranice',
       message: 'Poruka',
       messagePlaceholder: 'Opišite svoj projekt…',
       submit: 'Pošalji poruku',
+      stubAfterSubmit:
+        'Hvala — poruka još nije poslana. Pozadinski sustav za kontakt nije spojen; zasad koristite adrese e-pošte iznad.',
+    },
+  },
+  legal: {
+    backToSite: '← Početna',
+    privacy: {
+      title: 'Politika privatnosti',
+      badge: 'Zamjenski tekst — zamijeniti nakon pravnog pregleda',
+      intro:
+        'Ova stranica u grubim crtama opisuje kako VMN Digital može postupati s informacijama. Nije pravni savjet. Zamijenite sadržaj odobrenim od strane odvjetnika prije produkcije.',
+      sections: [
+        {
+          heading: 'Tko smo',
+          body: 'VMN Digital djeluje u sklopu VMN – Visual Marketing Networka. Kontakt podaci su u sekciji kontakt na glavnoj stranici.',
+        },
+        {
+          heading: 'Informacije koje dostavljate',
+          body: 'Ako koristite obrazac ili e-poštu, možete dostaviti identifikatore poput imena, adrese e-pošte i sadržaja poruke kako bismo odgovorili.',
+        },
+        {
+          heading: 'Kako koristimo informacije',
+          body: 'Upite koristimo za komunikaciju o vašem zahtjevu i povezanim uslugama. Ne prodajemo osobne podatke. Zadržavanje i podizvođače treba opisati nakon pregleda.',
+        },
+        {
+          heading: 'Kolačići i analitika',
+          body: 'Ako stranica koristi analitiku ili kolačiće, ovdje opišite kategorije i izbore. Ažurirajte kad alati budu konačni.',
+        },
+        {
+          heading: 'Vaša prava i kontakt',
+          body: 'Ovisno o regiji, možda imate pravo na pristup ili brisanje osobnih podataka. Dodajte prava za jurisdikciju i kanal za zahtjeve vezane uz privatnost nakon pravnog pregleda.',
+        },
+      ],
+    },
+    terms: {
+      title: 'Uvjeti korištenja',
+      badge: 'Zamjenski tekst — zamijeniti nakon pravnog pregleda',
+      intro:
+        'Ovi uvjeti su neobvezujući zamjenski okvir za buduću pravnu stranicu. Pregledajte ih prije lansiranja.',
+      sections: [
+        {
+          heading: 'Korištenje ove stranice',
+          body: 'Sadržaj je informativan. Stranice, značajke ili dostupnost mogu se mijenjati bez najave.',
+        },
+        {
+          heading: 'Bez stručnog savjeta',
+          body: 'Ništa na stranici nije pravni, financijski ili drugi stručni savjet. Suradnje uređuju posebni ugovori.',
+        },
+        {
+          heading: 'Intelektualno vlasništvo',
+          body: 'Brendiranje, tekst i dizajn pripadaju VMN Digitalu ili davateljima licence osim ako je drugačije navedeno. Ne koristite bez dozvole.',
+        },
+        {
+          heading: 'Ograničenje odgovornosti',
+          body: 'U okviru zakona, VMN Digital nije odgovoran za neizravnu ili posljedičnu štetu iz korištenja stranice. Pojasnite s odvjetnikom.',
+        },
+        {
+          heading: 'Mjerodavno pravo',
+          body: 'Dodajte odgovarajuću jurisdikciju i način rješavanja sporova nakon pravnog pregleda.',
+        },
+      ],
     },
   },
   footer: {
     tagline:
       'Transformiramo poslovanje kroz vrhunski web dizajn i digitalna rješenja.',
-    colServices: 'Usluge',
-    colCompany: 'Tvrtka',
+    brandLine: 'VMN – Visual Marketing Network',
+    colNavigate: 'Na stranici',
+    colLegal: 'Pravno',
     colContact: 'Kontakt',
-    linkWebDesign: 'Web dizajn',
-    linkPerformance: 'Poboljšanje performansi',
-    linkConsultation: 'Konzultacije',
+    linkServices: 'Usluge',
     linkAbout: 'O nama',
-    linkProcess: 'Naš proces',
-    linkTestimonials: 'Iskustva klijenata',
-    linkFaq: 'Često postavljana pitanja',
+    linkProcess: 'Proces',
+    linkTestimonials: 'Preporuke',
     linkPortfolio: 'Portfolio',
+    linkFaq: 'ČPP',
     linkContact: 'Kontakt',
-    copyright: '© {year} VMN Digital. Sva prava pridržana.',
+    linkPrivacy: 'Politika privatnosti',
+    linkTerms: 'Uvjeti korištenja',
+    copyright: '© {year} VMN Digital · {brandLine}. Sva prava pridržana.',
   },
 } as const
 
