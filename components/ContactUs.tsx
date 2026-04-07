@@ -5,14 +5,56 @@ import Link from 'next/link'
 
 import { useLocale } from '@/components/locale-provider'
 
+type FormStatus = 'idle' | 'sending' | 'success' | 'error'
+
 export default function ContactUs() {
   const { t } = useLocale()
-  const [stubNotice, setStubNotice] = React.useState(false)
+  const [status, setStatus] = React.useState<FormStatus>('idle')
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setStubNotice(true)
+    const form = e.currentTarget
+    const fd = new FormData(form)
+    const name = String(fd.get('name') ?? '').trim()
+    const email = String(fd.get('email') ?? '').trim()
+    const subject = String(fd.get('subject') ?? '').trim()
+    const message = String(fd.get('message') ?? '').trim()
+
+    if (!email || !message) return
+
+    setStatus('sending')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name || undefined,
+          email,
+          subject: subject || undefined,
+          message,
+        }),
+      })
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
+
+  const notice =
+    status === 'success' ? (
+      <p className="text-sm text-primary/90 border border-primary/30 rounded-lg px-3 py-2 bg-primary/5">
+        {t.contact.form.successAfterSubmit}
+      </p>
+    ) : status === 'error' ? (
+      <p className="text-sm text-destructive border border-destructive/30 rounded-lg px-3 py-2 bg-destructive/5">
+        {t.contact.form.errorAfterSubmit}
+      </p>
+    ) : null
 
   return (
     <section
@@ -109,17 +151,18 @@ export default function ContactUs() {
                   id="message"
                   name="message"
                   rows={4}
+                  required
                   className="w-full px-4 py-2 bg-card border border-border rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors resize-none"
                   placeholder={t.contact.form.messagePlaceholder}
                 />
               </div>
-              {stubNotice && (
-                <p className="text-sm text-primary/90 border border-primary/30 rounded-lg px-3 py-2 bg-primary/5">
-                  {t.contact.form.stubAfterSubmit}
-                </p>
-              )}
-              <button type="submit" className="btn-primary w-full">
-                {t.contact.form.submit}
+              {notice}
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="btn-primary w-full disabled:opacity-60 disabled:pointer-events-none"
+              >
+                {status === 'sending' ? t.contact.form.sending : t.contact.form.submit}
               </button>
             </form>
           </div>
