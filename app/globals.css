@@ -1,56 +1,27 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  --background: #0B0C10;
-  --foreground: #C5C6C7;
-  --card: #1F2833;
-  --card-foreground: #C5C6C7;
-  --primary: #66FCF1;
-  --primary-foreground: #0B0C10;
-  --secondary: #45A29E;
-  --secondary-foreground: #C5C6C7;
-  --accent: #66FCF1;
-  --accent-foreground: #0B0C10;
-  --muted: #45A29E;
-  --muted-foreground: #C5C6C7;
-  --destructive: #FF6B6B;
-  --destructive-foreground: #FFFFFF;
-  --border: #45A29E;
-  --input: #1F2833;
-  --ring: #66FCF1;
+@theme {
+  --color-background: #0B0C10;
+  --color-foreground: #C5C6C7;
+  --color-card: #1F2833;
+  --color-card-foreground: #C5C6C7;
+  --color-primary: #66FCF1;
+  --color-primary-foreground: #0B0C10;
+  --color-secondary: #45A29E;
+  --color-secondary-foreground: #C5C6C7;
+  --color-accent: #66FCF1;
+  --color-accent-foreground: #0B0C10;
+  --color-muted: #45A29E;
+  --color-muted-foreground: #C5C6C7;
+  --color-destructive: #FF6B6B;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #45A29E;
+  --color-input: #1F2833;
+  --color-ring: #66FCF1;
   --radius: 0.625rem;
 }
 
-.dark {
-  --background: #0B0C10;
-  --foreground: #C5C6C7;
-  --card: #1F2833;
-  --card-foreground: #C5C6C7;
-  --primary: #66FCF1;
-  --primary-foreground: #0B0C10;
-  --secondary: #45A29E;
-  --secondary-foreground: #FFFFFF;
-  --muted: #45A29E;
-  --muted-foreground: #C5C6C7;
-  --accent: #66FCF1;
-  --accent-foreground: #0B0C10;
-  --destructive: #FF6B6B;
-  --destructive-foreground: #FFFFFF;
-  --border: #45A29E;
-  --input: #1F2833;
-  --ring: #66FCF1;
-}
-
-@import 'tailwindcss';
-@import 'tw-animate-css';
-
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
     @apply bg-background text-foreground;
   }
