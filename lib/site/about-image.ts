@@ -1,15 +1,14 @@
 /**
  * About section photo — keep intrinsic `width` / `height` in sync with the real
- * `public/about-partnership.png` file (IHDR). When you replace the file with a
- * higher-resolution export, update those numbers to match the new asset.
+ * file in `public/`. When you replace the asset, update those numbers.
  */
 export const ABOUT_PARTNERSHIP_IMAGE = {
-  src: '/about-partnership.png',
-  /** Pixel dimensions of the PNG on disk */
-  width: 271,
-  height: 226,
-  /** Max width the image is allowed to occupy in the layout (CSS px) */
-  maxWidthPx: 340,
+  src: '/about-partnership.jpg',
+  /** Pixel dimensions of the file on disk (JPEG) */
+  width: 1024,
+  height: 853,
+  /** Max width the photo occupies in the layout (CSS px); matches `sizes` + frame */
+  maxWidthPx: 440,
 } as const
 
 /**

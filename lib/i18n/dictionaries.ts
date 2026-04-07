@@ -65,7 +65,7 @@ const en = {
     titleHighlight: 'VMN Digital',
     brandLine: 'VMN – Visual Marketing Network',
     imageAlt:
-      'Two professionals shaking hands outdoors at a business event, symbolizing partnership and trust for VMN Digital’s web design services.',
+      'Two young men shaking hands outdoors: one in a casual black t-shirt, the other in a navy pinstripe suit with a red tie—symbolizing partnership and trust for VMN Digital.',
     summary:
       'We help businesses strengthen their online presence with thoughtful web design—pairing strategy, performance, and clear communication so your site supports real outcomes.',
     readMore: 'Read more',
@@ -377,7 +377,7 @@ const hr = {
     titleHighlight: 'VMN Digitalu',
     brandLine: 'VMN – Visual Marketing Network',
     imageAlt:
-      'Dva profesionalca se rukuju na otvorenom na poslovnom događaju, u simbolu partnerstva i povjerenja u web dizajn uslugama VMN Digitala.',
+      'Dvojica mladića u rukovanju na otvorenom: jedan u crnoj majici, drugi u mornarskom odijelu s crvenom kravatom—simbol partnerstva i povjerenja za VMN Digital.',
     summary:
       'Pomažemo tvrtkama ojačati online prisutnost promišljenim web dizajnom—strategija, performanse i jasna komunikacija kako bi stranica podržavala stvarne ishode.',
     readMore: 'Pročitaj više',

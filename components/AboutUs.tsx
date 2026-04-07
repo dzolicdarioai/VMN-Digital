@@ -23,23 +23,33 @@ export default function AboutUs() {
     <section id="about" className="section-padding-tight section-surface-muted relative">
       <div className="max-w-6xl mx-auto relative z-[1]">
         <div className="grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-start">
-          <div className="relative mx-auto w-full max-w-md lg:max-w-none lg:mx-0">
+          <div
+            className="relative mx-auto w-full lg:mx-0"
+            style={{ maxWidth: ABOUT_PARTNERSHIP_IMAGE.maxWidthPx }}
+          >
             <div
-              className="pointer-events-none absolute -inset-2 rounded-2xl bg-primary/[0.06] blur-xl"
+              className="pointer-events-none absolute -inset-3 rounded-[1.35rem] bg-gradient-to-br from-primary/[0.12] via-primary/[0.04] to-transparent opacity-90 blur-2xl"
               aria-hidden
             />
-            <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-card/50 shadow-[0_24px_80px_-32px_rgb(0_0_0_/_0.65)]">
-              <Image
-                src={ABOUT_PARTNERSHIP_IMAGE.src}
-                alt={t.about.imageAlt}
-                width={ABOUT_PARTNERSHIP_IMAGE.width}
-                height={ABOUT_PARTNERSHIP_IMAGE.height}
-                quality={95}
-                sizes={aboutPartnershipSizes()}
-                className="mx-auto block h-auto w-full object-contain object-center lg:mx-0"
-                style={{ maxWidth: ABOUT_PARTNERSHIP_IMAGE.maxWidthPx }}
-                priority={false}
-              />
+            <div
+              className="relative overflow-hidden rounded-2xl border border-primary/25 bg-card/50 shadow-[0_28px_90px_-36px_rgb(0_0_0_/_0.72)] ring-1 ring-inset ring-white/[0.07]"
+            >
+              <div
+                className="relative w-full"
+                style={{
+                  aspectRatio: `${ABOUT_PARTNERSHIP_IMAGE.width} / ${ABOUT_PARTNERSHIP_IMAGE.height}`,
+                }}
+              >
+                <Image
+                  src={ABOUT_PARTNERSHIP_IMAGE.src}
+                  alt={t.about.imageAlt}
+                  fill
+                  quality={95}
+                  sizes={aboutPartnershipSizes()}
+                  className="object-cover object-center"
+                  priority={false}
+                />
+              </div>
             </div>
           </div>
 
