@@ -66,9 +66,17 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="section-padding-tight bg-background relative overflow-hidden"
+      className="section-padding-tight section-chapter-testimonials section-divider-top relative overflow-hidden bg-background"
     >
-      <div className="max-w-6xl mx-auto relative z-[1]">
+      <div
+        className="pointer-events-none absolute left-[max(0px,calc(50%-28rem))] top-[18%] z-0 h-[min(22rem,60vw)] w-[min(22rem,50vw)] rounded-full bg-[radial-gradient(circle_at_40%_45%,rgb(102_252_241_/_0.07),transparent_68%)] blur-3xl opacity-90"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute right-[max(0px,calc(50%-26rem))] bottom-[12%] z-0 h-[min(20rem,55vw)] w-[min(20rem,48vw)] rounded-full bg-[radial-gradient(circle_at_60%_55%,rgb(155_139_196_/_0.06),transparent_65%)] blur-3xl opacity-85"
+        aria-hidden
+      />
+      <div className="relative z-[1] mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-balance">
           {t.testimonials.titleBefore}
           <span className="text-primary">{t.testimonials.titleHighlight}</span>

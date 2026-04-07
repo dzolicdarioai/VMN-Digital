@@ -12,7 +12,10 @@ export default function Faq() {
   const { t } = useLocale()
 
   return (
-    <section id="faq" className="section-padding-alt section-surface relative">
+    <section
+      id="faq"
+      className="section-padding-alt section-surface section-chapter-faq section-divider-top relative"
+    >
       <div className="max-w-3xl mx-auto relative z-[1]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-balance">
           {t.faq.titleBefore}

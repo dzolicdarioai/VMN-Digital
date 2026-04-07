@@ -51,7 +51,7 @@ function ProcessStepReveal({
     <div
       ref={ref}
       className={cn(
-        'transition-[opacity,transform] duration-[550ms] ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0',
+        'transition-[opacity,transform] duration-[520ms] ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0',
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6',
         className,
       )}
@@ -66,7 +66,10 @@ export default function Process() {
   const steps = t.process.steps
 
   return (
-    <section id="process" className="section-padding-alt section-surface relative">
+    <section
+      id="process"
+      className="section-padding-alt section-surface section-chapter-process section-divider-top relative"
+    >
       <div className="glow-orb bottom-0 left-0 h-56 w-56 opacity-20" aria-hidden />
       <div className="max-w-3xl mx-auto relative z-[1]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-balance">
@@ -98,7 +101,7 @@ export default function Process() {
                           className={cn(
                             'flex h-11 w-11 items-center justify-center rounded-full border-2 border-primary/70 bg-background/95',
                             'shadow-[0_0_24px_-8px_rgb(102_252_241_/_0.45)]',
-                            'transition-transform duration-300 hover:scale-[1.03]',
+                            'transition-transform duration-[280ms] hover:scale-[1.03]',
                           )}
                         >
                           <Icon className="h-5 w-5 text-primary" aria-hidden />

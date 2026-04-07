@@ -22,8 +22,8 @@ export default function Footer() {
   ] as const
 
   return (
-    <footer className="border-t border-border/60 bg-card/40 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto px-4 md:px-8 py-12">
+    <footer className="footer-shell backdrop-blur-md">
+      <div className="relative z-[1] max-w-6xl mx-auto px-4 md:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div>
             <div className="text-xl font-bold mb-2">

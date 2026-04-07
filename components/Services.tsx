@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="section-padding section-surface relative"
+      className="section-padding section-surface section-chapter-services section-divider-top relative"
     >
       <div className="glow-orb top-1/4 right-0 h-64 w-64 opacity-25" aria-hidden />
       <div className="max-w-6xl mx-auto relative z-[1]">

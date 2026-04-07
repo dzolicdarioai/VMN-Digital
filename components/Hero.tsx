@@ -4,10 +4,6 @@ import Link from 'next/link'
 
 import { useLocale } from '@/components/locale-provider'
 
-/** SVG noise tile (feTurbulence) — hero-only layer, complements global body noise */
-const HERO_NOISE =
-  "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")"
-
 function HeroMockup() {
   return (
     <div className="relative w-full max-w-xl lg:max-w-none mx-auto lg:mx-0">
@@ -90,8 +86,8 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-[radial-gradient(ellipse_100%_70%_at_50%_-15%,rgb(102_252_241_/_0.14),transparent_55%),radial-gradient(ellipse_55%_45%_at_100%_30%,rgb(69_162_158_/_0.12),transparent_50%),radial-gradient(ellipse_50%_40%_at_0%_75%,rgb(102_252_241_/_0.08),transparent_48%)]"
         />
-        <div className="glow-orb -left-32 top-1/4 h-80 w-80 max-w-[50vw] opacity-30 md:left-0" />
-        <div className="glow-orb -right-24 bottom-0 h-72 w-[min(100%,24rem)] opacity-25" />
+        <div className="glow-orb -left-32 top-1/4 h-80 w-80 max-w-[50vw] opacity-24 md:left-0" />
+        <div className="glow-orb -right-24 bottom-0 h-72 w-[min(100%,24rem)] opacity-20" />
         <div
           className="absolute inset-0 opacity-[0.2]"
           style={{
@@ -102,11 +98,13 @@ export default function Hero() {
               'radial-gradient(ellipse 75% 65% at 50% 45%, black 15%, transparent 72%)',
           }}
         />
-        <div
-          className="absolute inset-0 opacity-[0.22] mix-blend-overlay"
-          style={{ backgroundImage: HERO_NOISE }}
-        />
       </div>
+
+      {/* Headline column spotlight — draws the eye before the mockup */}
+      <div
+        className="pointer-events-none absolute left-[max(0px,calc(50%-22rem))] top-[22%] z-0 h-[min(28rem,78vw)] w-[min(100%,24rem)] rounded-full bg-[radial-gradient(ellipse_75%_70%_at_45%_45%,rgb(102_252_241_/_0.14),transparent_68%)] blur-[44px] opacity-95 md:left-[12%] md:top-[24%] lg:left-[max(0px,calc(50%-36rem))]"
+        aria-hidden
+      />
 
       {/* Layout-tied glow accents (headline column + mockup column) */}
       <div
@@ -119,15 +117,15 @@ export default function Hero() {
       />
 
       <div className="relative z-[1] mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16 xl:max-w-7xl">
-        <div className="text-center lg:text-left">
-          <h1 className="mb-6 text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
+        <div className="hero-copy-panel text-center lg:text-left">
+          <h1 className="hero-text-shadow mb-6 text-balance text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
             {t.hero.titleBefore}
             <span className="text-primary">{t.hero.titleHighlight}</span>
           </h1>
-          <p className="mx-auto mb-4 max-w-xl text-lg leading-relaxed text-foreground/80 lg:mx-0 md:text-xl">
+          <p className="mx-auto mb-4 max-w-xl text-lg leading-relaxed text-foreground/88 lg:mx-0 md:text-xl">
             {t.hero.subtitle}
           </p>
-          <p className="mx-auto mb-10 max-w-xl border-l-2 border-primary/50 pl-4 text-left text-sm leading-relaxed text-foreground/75 md:text-base lg:mx-0">
+          <p className="mx-auto mb-10 max-w-xl border-l-2 border-primary/50 pl-4 text-left text-sm leading-relaxed text-foreground/82 md:text-base lg:mx-0">
             {t.hero.analysisLine}
           </p>
           <Link href="#contact" className="btn-primary text-base md:text-lg inline-flex">

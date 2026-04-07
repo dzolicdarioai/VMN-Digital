@@ -8,12 +8,23 @@ import Hero from '@/components/Hero'
 import { Reveal } from '@/components/reveal'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
+import { SectionSkeleton } from '@/components/section-loading'
 
-const Portfolio = dynamic(() => import('@/components/Portfolio'))
-const Testimonials = dynamic(() => import('@/components/Testimonials'))
-const Faq = dynamic(() => import('@/components/Faq'))
-const ContactUs = dynamic(() => import('@/components/ContactUs'))
-const Footer = dynamic(() => import('@/components/Footer'))
+const Portfolio = dynamic(() => import('@/components/Portfolio'), {
+  loading: () => <SectionSkeleton />,
+})
+const Testimonials = dynamic(() => import('@/components/Testimonials'), {
+  loading: () => <SectionSkeleton />,
+})
+const Faq = dynamic(() => import('@/components/Faq'), {
+  loading: () => <SectionSkeleton />,
+})
+const ContactUs = dynamic(() => import('@/components/ContactUs'), {
+  loading: () => <SectionSkeleton />,
+})
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <SectionSkeleton />,
+})
 
 export default function Home() {
   return (

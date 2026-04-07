@@ -15,7 +15,10 @@ export default function ContactUs() {
   }
 
   return (
-    <section id="contact" className="section-padding section-surface-muted relative">
+    <section
+      id="contact"
+      className="section-padding section-surface-muted section-chapter-contact section-divider-top relative"
+    >
       <div className="max-w-4xl mx-auto relative z-[1]">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 text-center sm:text-left">
           <div className="flex-1">
@@ -56,7 +59,7 @@ export default function ContactUs() {
 
           <div
             id="contact-form"
-            className="p-8 rounded-xl border border-border/60 bg-background/60 backdrop-blur-md shadow-[0_0_40px_-20px_rgb(102_252_241_/_0.2)] scroll-mt-28"
+            className="contact-terminal-panel border p-8 backdrop-blur-md shadow-[0_0_40px_-20px_rgb(102_252_241_/_0.2)] scroll-mt-28"
           >
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>

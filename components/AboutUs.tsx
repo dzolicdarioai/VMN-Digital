@@ -20,7 +20,10 @@ export default function AboutUs() {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <section id="about" className="section-padding-tight section-surface-muted relative">
+    <section
+      id="about"
+      className="section-padding-tight section-surface-muted section-chapter-about section-divider-top relative"
+    >
       <div className="max-w-6xl mx-auto relative z-[1]">
         <div className="grid gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:items-start">
           <div

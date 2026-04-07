@@ -10,8 +10,19 @@ export default function Portfolio() {
   const projects = t.portfolio.items
 
   return (
-    <section id="portfolio" className="section-padding section-surface-muted relative">
-      <div className="glow-orb bottom-0 left-1/4 h-72 w-72 opacity-20" aria-hidden />
+    <section
+      id="portfolio"
+      className="section-padding section-surface-muted section-chapter-portfolio section-divider-top relative"
+    >
+      <div
+        className="pointer-events-none absolute left-0 top-1/2 z-0 h-[min(24rem,70vw)] w-[min(24rem,55vw)] -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_30%_50%,rgb(102_252_241_/_0.08),transparent_65%)] blur-3xl opacity-80"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute right-0 bottom-0 z-0 h-[min(20rem,55vw)] w-[min(20rem,45vw)] rounded-full bg-[radial-gradient(circle_at_70%_60%,rgb(69_162_158_/_0.09),transparent_62%)] blur-3xl opacity-75"
+        aria-hidden
+      />
+      <div className="glow-orb bottom-0 left-1/4 h-72 w-72 opacity-16" aria-hidden />
       <div className="max-w-6xl mx-auto relative z-[1]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-balance">
           {t.portfolio.titleBefore}
@@ -25,7 +36,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="group flex flex-col p-8 rounded-xl border border-border/80 bg-background/75 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_20px_48px_-24px_rgb(102_252_241_/_0.28)]"
+              className="group flex flex-col p-8 rounded-xl border border-border/80 bg-background/75 backdrop-blur-sm transition-all duration-[280ms] ease-out hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_20px_48px_-24px_rgb(102_252_241_/_0.28)]"
             >
               <p className="text-xs font-medium uppercase tracking-wider text-primary/90 mb-2">
                 {project.category}
