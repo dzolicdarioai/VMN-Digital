@@ -2,9 +2,11 @@
 
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
+import Faq from '@/components/Faq'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import Portfolio from '@/components/Portfolio'
 import Process from '@/components/Process'
 import { Reveal } from '@/components/reveal'
 import Services from '@/components/Services'
@@ -28,6 +30,12 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Testimonials />
+      </Reveal>
+      <Reveal>
+        <Portfolio />
+      </Reveal>
+      <Reveal>
+        <Faq />
       </Reveal>
       <Reveal>
         <ContactUs />

@@ -14,6 +14,29 @@ const en = {
   header: {
     brand: 'VMN Digital',
   },
+  nav: {
+    services: 'Services',
+    about: 'About',
+    process: 'Process',
+    testimonials: 'Testimonials',
+    faq: 'FAQ',
+    contact: 'Contact',
+  },
+  navMenu: 'Menu',
+  portfolio: {
+    titleBefore: 'Selected ',
+    titleHighlight: 'work',
+    intro:
+      'Placeholder projects — real case studies will appear here as they become available.',
+  },
+  faq: {
+    titleBefore: 'Frequently asked ',
+    titleHighlight: 'questions',
+    intro:
+      'Short answers for now — a full FAQ accordion will follow in a later phase.',
+    placeholder:
+      'We are preparing detailed answers about the free analysis, timelines, and what to prepare before we start.',
+  },
   hero: {
     titleBefore: 'Web design that ',
     titleHighlight: 'drives results',
@@ -131,6 +154,9 @@ const en = {
     linkConsultation: 'Consultation',
     linkAbout: 'About us',
     linkProcess: 'Our process',
+    linkTestimonials: 'Testimonials',
+    linkFaq: 'FAQ',
+    linkPortfolio: 'Portfolio',
     linkContact: 'Contact',
     copyright: '© {year} VMN Digital. All rights reserved.',
   },
@@ -147,6 +173,29 @@ const hr = {
   },
   header: {
     brand: 'VMN Digital',
+  },
+  nav: {
+    services: 'Usluge',
+    about: 'O nama',
+    process: 'Proces',
+    testimonials: 'Iskustva',
+    faq: 'ČPP',
+    contact: 'Kontakt',
+  },
+  navMenu: 'Izbornik',
+  portfolio: {
+    titleBefore: 'Odabrani ',
+    titleHighlight: 'projekti',
+    intro:
+      'Zamjenski projekti — stvarni case studyji bit će ovdje kad budu dostupni.',
+  },
+  faq: {
+    titleBefore: 'Često postavljana ',
+    titleHighlight: 'pitanja',
+    intro:
+      'Kratki odgovori za sada — puni FAQ s akordeonom slijedi u kasnijoj fazi.',
+    placeholder:
+      'Pripremamo detaljne odgovore o besplatnoj analizi, rokovima i što pripremiti prije početka.',
   },
   hero: {
     titleBefore: 'Web dizajn koji ',
@@ -265,6 +314,9 @@ const hr = {
     linkConsultation: 'Konzultacije',
     linkAbout: 'O nama',
     linkProcess: 'Naš proces',
+    linkTestimonials: 'Iskustva klijenata',
+    linkFaq: 'Često postavljana pitanja',
+    linkPortfolio: 'Portfolio',
     linkContact: 'Kontakt',
     copyright: '© {year} VMN Digital. Sva prava pridržana.',
   },

@@ -56,6 +56,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="#testimonials" className="link-subtle">
+                  {t.footer.linkTestimonials}
+                </Link>
+              </li>
+              <li>
+                <Link href="#portfolio" className="link-subtle">
+                  {t.footer.linkPortfolio}
+                </Link>
+              </li>
+              <li>
+                <Link href="#faq" className="link-subtle">
+                  {t.footer.linkFaq}
+                </Link>
+              </li>
+              <li>
                 <Link href="#contact" className="link-subtle">
                   {t.footer.linkContact}
                 </Link>
