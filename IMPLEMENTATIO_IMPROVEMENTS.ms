@@ -115,7 +115,7 @@
 - [x] **K4** Copyright year + **VMN – Visual Marketing Network** tagline.
 
 ---
-
+ 
 ## Phase L — SEO & meta
 
 - [x] **L1** `metadata` in layout: `title`, `description`, `metadataBase` (canonical base URL when domain is fixed).
