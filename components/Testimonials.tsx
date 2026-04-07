@@ -1,14 +1,5 @@
 'use client'
 
-import * as React from 'react'
-import type { CarouselApi } from '@/components/ui/carousel'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { useLocale } from '@/components/locale-provider'
 import { cn } from '@/lib/utils'
@@ -66,79 +57,7 @@ function TestimonialCard({
   )
 }
 
-function TestimonialsCarousel({
-  items,
-  dotsAriaLabel,
-}: {
-  items: {
-    name: string
-    role: string
-    company: string
-    text: string
-  }[]
-  dotsAriaLabel: string
-}) {
-  const [api, setApi] = React.useState<CarouselApi>()
-  const [current, setCurrent] = React.useState(0)
-
-  React.useEffect(() => {
-    if (!api) return
-    setCurrent(api.selectedScrollSnap())
-    const onSelect = () => setCurrent(api.selectedScrollSnap())
-    api.on('select', onSelect)
-    api.on('reInit', onSelect)
-    return () => {
-      api.off('select', onSelect)
-      api.off('reInit', onSelect)
-    }
-  }, [api])
-
-  return (
-    <div className="relative px-11">
-      <Carousel
-        setApi={setApi}
-        opts={{ align: 'start', loop: true }}
-        className="w-full"
-      >
-        <CarouselContent className="-ml-3">
-          {items.map((testimonial, index) => (
-            <CarouselItem key={index} className="pl-3 basis-full">
-              <TestimonialCard
-                name={testimonial.name}
-                role={testimonial.role}
-                company={testimonial.company}
-                text={testimonial.text}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-0 border-border/80 bg-background/90" />
-        <CarouselNext className="right-0 border-border/80 bg-background/90" />
-      </Carousel>
-      <div
-        className="flex justify-center gap-2 mt-8"
-        role="tablist"
-        aria-label={dotsAriaLabel}
-      >
-        {items.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            role="tab"
-            aria-selected={current === i}
-            className={cn(
-              'h-2 rounded-full transition-all duration-300',
-              current === i
-                ? 'w-8 bg-primary'
-                : 'w-2 bg-foreground/25 hover:bg-foreground/40',
-            )}
-            onClick={() => api?.scrollTo(i)}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
+const CARD_WIDTH_CLASS = 'w-[min(22rem,calc(100vw-2.5rem))] shrink-0'
 
 export default function Testimonials() {
   const { t } = useLocale()
@@ -154,27 +73,49 @@ export default function Testimonials() {
           {t.testimonials.titleBefore}
           <span className="text-primary">{t.testimonials.titleHighlight}</span>
         </h2>
-        <p className="text-center text-foreground/70 mb-14 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-center text-foreground/70 mb-12 md:mb-14 max-w-2xl mx-auto leading-relaxed">
           {t.testimonials.intro}
         </p>
+      </div>
 
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={index}
-              name={testimonial.name}
-              role={testimonial.role}
-              company={testimonial.company}
-              text={testimonial.text}
-            />
-          ))}
-        </div>
+      <div
+        className="relative z-[1] w-full [--testimonials-duration:72s] [--testimonials-gap:2rem] md:[--testimonials-gap:2.25rem]"
+        role="region"
+        aria-label={t.testimonials.marqueeAriaLabel}
+        aria-roledescription="carousel"
+      >
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-10 bg-gradient-to-r from-background to-transparent md:w-16"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-10 bg-gradient-to-l from-background to-transparent md:w-16"
+          aria-hidden
+        />
 
-        <div className="md:hidden">
-          <TestimonialsCarousel
-            items={[...testimonials]}
-            dotsAriaLabel={t.testimonials.carouselDotsLabel}
-          />
+        <div className="testimonials-marquee-outer py-1">
+          <div className="testimonials-marquee-track">
+            {testimonials.map((item, index) => (
+              <div key={`a-${index}`} className={CARD_WIDTH_CLASS}>
+                <TestimonialCard
+                  name={item.name}
+                  role={item.role}
+                  company={item.company}
+                  text={item.text}
+                />
+              </div>
+            ))}
+            {testimonials.map((item, index) => (
+              <div key={`b-${index}`} className={CARD_WIDTH_CLASS} aria-hidden>
+                <TestimonialCard
+                  name={item.name}
+                  role={item.role}
+                  company={item.company}
+                  text={item.text}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

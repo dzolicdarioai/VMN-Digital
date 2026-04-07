@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 
+import { AnimatedBackground } from '@/components/animated-background'
 import { LocaleProvider } from '@/components/locale-provider'
 
 import './globals.css'
@@ -79,6 +80,7 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${geistMono.variable} ${geist.className} font-sans antialiased`}
       >
+        <AnimatedBackground />
         <LocaleProvider>{children}</LocaleProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

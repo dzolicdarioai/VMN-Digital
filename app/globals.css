@@ -52,7 +52,7 @@
     pointer-events: none;
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
     opacity: 0.35;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     mix-blend-mode: overlay;
@@ -73,7 +73,112 @@
 
 @layer components {
   .page-shell {
-    @apply relative z-[1];
+    @apply relative z-[2];
+  }
+
+  /* Global backdrop motion (AnimatedBackground) */
+  .animated-bg-gradient {
+    background:
+      radial-gradient(ellipse 90% 70% at 20% 30%, rgb(102 252 241 / 0.09), transparent 55%),
+      radial-gradient(ellipse 80% 60% at 80% 70%, rgb(69 162 158 / 0.07), transparent 52%),
+      radial-gradient(ellipse 70% 50% at 50% 50%, rgb(102 252 241 / 0.05), transparent 50%);
+    background-size: 200% 200%;
+    animation: animated-bg-shift 48s ease-in-out infinite alternate;
+  }
+
+  .animated-bg-orb-a {
+    animation: animated-bg-float-a 36s ease-in-out infinite;
+  }
+
+  .animated-bg-orb-b {
+    animation: animated-bg-float-b 42s ease-in-out infinite;
+  }
+
+  .animated-bg-shape {
+    animation: animated-bg-tilt 56s ease-in-out infinite;
+    transform-origin: 50% 45%;
+  }
+
+  @keyframes animated-bg-shift {
+    0% {
+      background-position: 0% 40%;
+    }
+    100% {
+      background-position: 100% 60%;
+    }
+  }
+
+  @keyframes animated-bg-float-a {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(6%, 4%) scale(1.04);
+    }
+  }
+
+  @keyframes animated-bg-float-b {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-5%, -3%) scale(1.03);
+    }
+  }
+
+  @keyframes animated-bg-tilt {
+    0%,
+    100% {
+      transform: rotateX(12deg) rotateY(-18deg) rotateZ(0deg);
+    }
+    50% {
+      transform: rotateX(8deg) rotateY(22deg) rotateZ(6deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animated-bg-gradient,
+    .animated-bg-orb-a,
+    .animated-bg-orb-b,
+    .animated-bg-shape {
+      animation: none;
+    }
+
+    .animated-bg-gradient {
+      background-position: 50% 50%;
+    }
+  }
+
+  /* Testimonials: infinite horizontal marquee (duplicate row = seamless loop) */
+  .testimonials-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: var(--testimonials-gap, 2rem);
+    animation: testimonials-marquee var(--testimonials-duration, 72s) linear infinite;
+  }
+
+  @keyframes testimonials-marquee {
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .testimonials-marquee-outer {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonials-marquee-outer {
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonials-marquee-track {
+      animation: none;
+    }
   }
 
   .btn-primary {

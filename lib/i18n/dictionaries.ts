@@ -178,7 +178,7 @@ const en = {
   testimonials: {
     titleBefore: 'What our ',
     titleHighlight: 'clients say',
-    carouselDotsLabel: 'Testimonial slides',
+    marqueeAriaLabel: 'Client testimonials, auto-scrolling',
     intro:
       'Placeholder quotes for launch—fictional names and companies. We will feature verified testimonials when permissions are in place.',
     items: [
@@ -211,6 +211,24 @@ const en = {
         role: 'Head of Marketing',
         company: 'Adriatic Craft Co.',
         text: 'VMN Digital balanced design ambition with practical constraints. Launch was smooth and we still iterate with a clear component system.',
+      },
+      {
+        name: 'Elena Volkov',
+        role: 'Product Director',
+        company: 'Crestline Analytics',
+        text: 'They made complex offerings feel simple without dumbing anything down. Stakeholder reviews went from painful to productive.',
+      },
+      {
+        name: 'Marcus Chen',
+        role: 'CTO',
+        company: 'Lattice Health',
+        text: 'Clean handoff, sensible tech choices, and documentation we could actually maintain. Rare to get design and engineering discipline in one team.',
+      },
+      {
+        name: 'Sofia Rossi',
+        role: 'Creative Director',
+        company: 'Studio Meridian',
+        text: 'Motion and typography finally feel intentional. The site carries our brand the way our decks do—consistent and confident.',
       },
     ],
   },
@@ -490,7 +508,7 @@ const hr = {
   testimonials: {
     titleBefore: 'Što kažu ',
     titleHighlight: 'klijenti',
-    carouselDotsLabel: 'Slajdovi preporuka',
+    marqueeAriaLabel: 'Preporuke klijenata, automatski pomični prikaz',
     intro:
       'Primjer citata za lansiranje—izmišljena imena i tvrtke. Zamijenit ćemo ih potvrđenim preporukama kad budu dostupne.',
     items: [
@@ -523,6 +541,24 @@ const hr = {
         role: 'Voditeljica marketinga',
         company: 'Adriatic Craft Co.',
         text: 'VMN Digital uravnotežio je dizajn ambiciju s praktičnim ograničenjima. Lansiranje je glatko, a i dalje iteriramo s jasnim sustavom komponenti.',
+      },
+      {
+        name: 'Elena Volkov',
+        role: 'Voditeljica proizvoda',
+        company: 'Crestline Analytics',
+        text: 'Složenu ponudu učinili su jednostavnom bez pojednostavljivanja sadržaja. Pregledi s dionicima više nisu mučni.',
+      },
+      {
+        name: 'Marcus Chen',
+        role: 'Glavni tehnološki direktor',
+        company: 'Lattice Health',
+        text: 'Čist predaja, razumne tehnološke odluke i dokumentacija koju možemo održavati. Rijetko je dobiti dizajn i inženjersku disciplinu u jednom timu.',
+      },
+      {
+        name: 'Sofia Rossi',
+        role: 'Kreativna direktorica',
+        company: 'Studio Meridian',
+        text: 'Animacija i tipografija konačno djeluju namjerno. Stranica nosi brend kao prezentacije—dosljedno i uvjerljivo.',
       },
     ],
   },
