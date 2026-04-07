@@ -9,6 +9,10 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
+import {
+  ABOUT_PARTNERSHIP_IMAGE,
+  aboutPartnershipSizes,
+} from '@/lib/site/about-image'
 
 export default function AboutUs() {
   const { t } = useLocale()
@@ -26,13 +30,14 @@ export default function AboutUs() {
             />
             <div className="relative overflow-hidden rounded-2xl border border-primary/20 bg-card/50 shadow-[0_24px_80px_-32px_rgb(0_0_0_/_0.65)]">
               <Image
-                src="/about-partnership.png"
+                src={ABOUT_PARTNERSHIP_IMAGE.src}
                 alt={t.about.imageAlt}
-                width={271}
-                height={226}
+                width={ABOUT_PARTNERSHIP_IMAGE.width}
+                height={ABOUT_PARTNERSHIP_IMAGE.height}
                 quality={95}
-                sizes="(min-width: 1024px) 340px, (min-width: 640px) 400px, min(100vw - 2rem, 400px)"
-                className="mx-auto block h-auto w-full max-w-[340px] object-contain object-center lg:mx-0"
+                sizes={aboutPartnershipSizes()}
+                className="mx-auto block h-auto w-full object-contain object-center lg:mx-0"
+                style={{ maxWidth: ABOUT_PARTNERSHIP_IMAGE.maxWidthPx }}
                 priority={false}
               />
             </div>

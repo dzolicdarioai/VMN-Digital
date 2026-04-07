@@ -64,6 +64,12 @@ const en = {
     titleBefore: 'About ',
     titleHighlight: 'VMN Digital',
     brandLine: 'VMN – Visual Marketing Network',
+    imageAlt:
+      'Two professionals shaking hands outdoors at a business event, symbolizing partnership and trust for VMN Digital’s web design services.',
+    summary:
+      'We help businesses strengthen their online presence with thoughtful web design—pairing strategy, performance, and clear communication so your site supports real outcomes.',
+    readMore: 'Read more',
+    readLess: 'Read less',
     p1: 'VMN Digital is the web practice behind VMN – Visual Marketing Network: a focused team helping businesses establish and strengthen their online presence. We believe that a well-designed website is more than an aesthetic achievement—it is a strategic tool for business growth.',
     p2: 'With a focus on modern design principles, user experience, and technical excellence, we work with organizations of different sizes to create websites that look sharp and perform reliably. Our approach combines creative vision with practical strategy so your site supports real business outcomes.',
     p3: 'Every business context is different. We invest time in understanding your goals, audience, and industry before design work begins—so the result reflects your brand with clarity and purpose.',
@@ -370,6 +376,12 @@ const hr = {
     titleBefore: 'O ',
     titleHighlight: 'VMN Digitalu',
     brandLine: 'VMN – Visual Marketing Network',
+    imageAlt:
+      'Dva profesionalca se rukuju na otvorenom na poslovnom događaju, u simbolu partnerstva i povjerenja u web dizajn uslugama VMN Digitala.',
+    summary:
+      'Pomažemo tvrtkama ojačati online prisutnost promišljenim web dizajnom—strategija, performanse i jasna komunikacija kako bi stranica podržavala stvarne ishode.',
+    readMore: 'Pročitaj više',
+    readLess: 'Smanji',
     p1: 'VMN Digital je web praksa unutar VMN – Visual Marketing Networka: fokusirani tim koji pomaže tvrtkama izgraditi i ojačati online prisutnost. Vjerujemo da dobro dizajnirana stranica nije samo estetika—ona je strateški alat za rast.',
     p2: 'S naglaskom na moderne principe dizajna, korisničko iskustvo i tehničku izvrsnost radimo s organizacijama različitih veličina kako bismo izradili stranice koje izgledaju uredno i pouzdano rade. Kombiniramo kreativnu viziju s praktičnom strategijom kako bi vaša stranica podržavala stvarne poslovne ishode.',
     p3: 'Svaki je kontekst drugačiji. Ulažemo vrijeme u razumijevanje vaših ciljeva, publike i industrije prije dizajna—kako bi rezultat jasno odražavao vaš brend.',
